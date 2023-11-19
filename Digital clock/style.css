@@ -1,0 +1,144 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(15, 183, 250),rgb(14, 226, 103));
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+span{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.digital-clock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 260px;
+    padding: .45rem 1.25rem;
+    margin-top: 150px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,.5);
+}
+
+.date-container{
+    font-size: 1.15rem;
+}
+
+.time-container{
+    font-size: 1.85rem;
+    min-width: 220px;
+}
+.seconde{
+    min-width: 40px;
+    text-align: center;
+}
+
+.show-format-button{
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    align-items: center;
+}
+
+/* hidden format box */
+.change-format-box{
+    cursor: auto;
+    position: relative;
+    display: none;
+    background-color: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .35rem .75rem;
+    min-width: 90px ;
+    border-radius: 5px;
+    transition: all 2ms ease-in-out;
+}
+
+/* show format box */
+.change-format-box.show{
+    display: inline-flex;
+    transition: all 2ms ease-in-out;
+}
+
+/* background 12 */
+.change-format-btn{
+    cursor: pointer;
+    width: 24px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    margin-left: .45rem;
+    background-color: rgb(247, 36, 71);
+    transition: all 4ms ease-in-out;
+}
+
+/* backgroud 24  */
+.change-format-btn.active{
+    /* cursor: pointer;
+    width: 24px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    border-radius: 8px; */
+    background-color: green;
+    transition: all 4ms ease-in-out;
+}
+
+/* format 12 */
+.change-format-btn::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 4ms ease-in-out;
+}
+
+/* format 24 */
+.change-format-btn.toggle::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translateX(-12px);
+    transition: all 4ms ease-in-out;
+
+}
+
+/* for hidden pm/am when format is 24 hour */
+.hidden-format{
+    display: none;
+}
+
+.link-page{
+    position: relative;
+    font-size: 1.2rem;
+    bottom: -200px;
+}
